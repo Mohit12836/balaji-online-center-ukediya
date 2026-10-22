@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Balaji Online Centre & Kirana - Deepak Hada | Gram Ukediya, Jaora, Ratlam</title>
+  <meta name="description" content="Balaji Online Centre & Kirana Store - Deepak Hada, Gram Ukediya, Tehsil Jaora, Jila Ratlam (MP). Ticket Booking, Bill Payment, PAN Card, eKYC, Kirana saman aur Online Sevaayein.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement / Contact Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info-left">
+        <span class="info-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <strong>Gram Ukediya, Tehsil Jaora, Jila Ratlam, MP</strong>
+        </span>
+        <span class="info-pill hide-on-mobile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Mon - Sun: 8:00 AM - 9:00 PM
+        </span>
+      </div>
+      <div class="top-info-right">
+        <a href="tel:+919753456789" class="phone-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 97534 56789
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Navigation Bar -->
+  <nav class="main-nav" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon-box">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="logo-badge-b">B</span>
+        </div>
+        <div class="logo-text-group">
+          <span class="brand-title">Balaji</span>
+          <span class="brand-subtitle">Online Centre &amp; Kirana</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#services" class="nav-link">Our Services</a>
+        <a href="#kirana" class="nav-link">Kirana Store</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/919753456789?text=Namaste%20Deepak%20ji,%20mujhe%20Balaji%20Online%20Centre%20se%20seva%20chahiye." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+          </svg>
+          <span>Contact Us</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="drawer-header">
+        <div class="logo-text-group">
+          <span class="brand-title">Balaji</span>
+          <span class="brand-subtitle">Online Centre &amp; Kirana</span>
+        </div>
+        <button class="drawer-close" id="drawerCloseBtn">&times;</button>
+      </div>
+      <div class="drawer-links">
+        <a href="#home" class="drawer-link active">Home</a>
+        <a href="#services" class="drawer-link">Our Services (12+)</a>
+        <a href="#kirana" class="drawer-link">Kirana Store Products</a>
+        <a href="#about" class="drawer-link">About Us &amp; Shop</a>
+        <a href="#contact" class="drawer-link">Visit &amp; Contact</a>
+      </div>
+      <div class="drawer-footer">
+        <a href="tel:+919753456789" class="btn btn-outline-call">
+          📞 Call: +91 97534 56789
+        </a>
+        <a href="https://wa.me/919753456789" class="btn btn-whatsapp-full">
+          💬 WhatsApp Deepak Ji
+        </a>
+      </div>
+    </div>
+
+    <!-- Waving Glowing Golden Line at Bottom of Navbar -->
+    <div class="nav-golden-line"></div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main id="home" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-text-col">
+        <!-- Village & Owner Badge -->
+        <div class="owner-pill-badge">
+          <span class="badge-dot"></span>
+          <span><strong>Deepak Hada</strong> • Gram Ukediya, Tehsil Jaora, Ratlam</span>
+        </div>
+
+        <h1 class="hero-heading">
+          Ticket Booking, Bill Payment, <span class="highlight-red">PAN Card</span>, eKYC aur <span class="highlight-orange">Kirana Items</span>
+        </h1>
+
+        <p class="hero-subtext">
+          Ab sabhi jaroori sevaayein aur roz ki kirana ki saari cheezein ek hi jagah par — aapke gaon ke liye, aapke apne <strong>Balaji Online Centre</strong> par!
+        </p>
+
+        <!-- Fast Trust Badges -->
+        <div class="trust-pills-row">
+          <div class="trust-tag">
+            <span class="tag-icon green-bg">✓</span>
+            <span>Fast Service</span>
+          </div>
+          <div class="trust-tag">
+            <span class="tag-icon orange-bg">👥</span>
+            <span>Local Support</span>
+          </div>
+          <div class="trust-tag">
+            <span class="tag-icon blue-bg">👍</span>
+            <span>Trusted by Villagers</span>
+          </div>
+        </div>
+
+        <!-- Quick Action CTA Buttons -->
+        <div class="hero-cta-group">
+          <a href="#services" class="btn btn-primary-blue">
+            <span>Explore 12+ Services</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#kirana" class="btn btn-outline-orange">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span>Kirana Items</span>
+          </a>
+          <a href="https://wa.me/919753456789" target="_blank" class="btn btn-whatsapp-action">
+            <span>Direct WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Visual Photo Card with Deepak Hada, Banner & QR -->
+      <div class="hero-visual-col">
+        <div class="shop-hero-card photo-card-frame">
+          <!-- Card Header Banner -->
+          <div class="card-banner-top">
+            <div class="card-brand">
+              <span class="card-brand-title">Balaji Online Centre &amp; Kirana</span>
+              <span class="card-owner">Sanchalak: Deepak Hada</span>
+            </div>
+            <div class="live-status-badge">
+              <span class="pulse-dot"></span> OPEN TODAY
+            </div>
+          </div>
+
+          <!-- Real Cropped Photo of Deepak Hada at Shop Counter -->
+          <div class="hero-photo-wrapper">
+            <img src="assets/hero_counter_clean.jpg" alt="Deepak Hada - Balaji Online Centre & Kirana" class="hero-main-photo" loading="eager">
+            <div class="photo-overlay-badges">
+              <span class="overlay-tag-slogan">"आपकी सुविधा, हमारी प्राथमिकता"</span>
+              <button class="overlay-qr-btn" id="openQrModalBtn" title="Click to view full UPI QR Code">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M2 2h8v8H2zm2 2v4h4V4zm10-2h8v8h-8zm2 2v4h4V4zM2 14h8v8H2zm2 2v4h4v-4zm10 0h2v2h-2zm4 0h2v2h-2zm-4 4h2v2h-2zm4 0h2v2h-2zm2-2h2v2h-2zm-2-4h4v2h-4zm-8-3h2v2h-2zm4 0h2v2h-2zm0 4h2v2h-2zm-4 4h2v2h-2z"/>
+                </svg>
+                <span>Scan BHIM UPI</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bottom Card Footer Note -->
+          <div class="card-footer-banner">
+            <span>📍 Gram Ukediya (Jaora, Ratlam) • Instant Village Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Quick Filter & Live Search Bar -->
+  <section class="search-filter-section">
+    <div class="container">
+      <div class="search-box-wrap">
+        <div class="search-input-group">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="liveSearchInput" placeholder="Aapko kya seva ya kirana saman chahiye? (e.g. Ticket, PAN Card, Atta, Bill, Xerox...)" autocomplete="off">
+          <button id="clearSearchBtn" class="clear-search-btn" title="Clear Search">&times;</button>
+        </div>
+        <div class="filter-pills" id="filterPillsContainer">
+          <button class="pill-btn active" data-filter="all">All Items</button>
+          <button class="pill-btn" data-filter="service">Online Services (12)</button>
+          <button class="pill-btn" data-filter="tickets">Tickets &amp; Travel</button>
+          <button class="pill-btn" data-filter="bills">Bills &amp; Recharge</button>
+          <button class="pill-btn" data-filter="gov">Govt &amp; KYC</button>
+          <button class="pill-btn" data-filter="kirana">Kirana Groceries (6+)</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: OUR SERVICES (Small Auto-Responsive Blocks) -->
+  <section id="services" class="section-services">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <div class="title-accent-badge">
+          <span class="dash-line"></span>
+          <h2 class="section-main-title">Our Services</h2>
+          <span class="dash-line"></span>
+        </div>
+        <p class="section-subtitle">12+ Online Services for Your Daily Needs</p>
+      </div>
+
+      <!-- 12 Compact Auto-Responsive Blocks (Grid Auto-Fit) -->
+      <div class="services-grid" id="servicesGrid">
+        
+        <!-- 1. Railway Ticket -->
+        <div class="service-card block-hover" data-category="tickets service" data-title="Railway Ticket Train Tatkal" onclick="openServiceModal('Railway Ticket', 'IRCTC Rail Ticket Booking, Tatkal Ticket & PNR Status', 'assets/icon_railway.png')">
+          <div class="service-icon-wrap icon-bg-red">
+            <img src="assets/icon_railway.png" alt="Railway Ticket" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">Railway Ticket</h3>
+          <span class="service-badge">IRCTC / Tatkal</span>
+        </div>
+
+        <!-- 2. Bus Ticket -->
+        <div class="service-card block-hover" data-category="tickets service" data-title="Bus Ticket Sleeper Seater" onclick="openServiceModal('Bus Ticket', 'Intercity & Sleeper Bus Seat Booking for all routes', 'assets/icon_bus.png')">
+          <div class="service-icon-wrap icon-bg-blue">
+            <img src="assets/icon_bus.png" alt="Bus Ticket" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">Bus Ticket</h3>
+          <span class="service-badge">Private &amp; State</span>
+        </div>
+
+        <!-- 3. Flight Ticket -->
+        <div class="service-card block-hover" data-category="tickets service" data-title="Flight Ticket Air Airplane" onclick="openServiceModal('Flight Ticket', 'Lowest Airfare Ticket Booking for Domestic & International flights', 'assets/icon_flight.png')">
+          <div class="service-icon-wrap icon-bg-purple">
+            <img src="assets/icon_flight.png" alt="Flight Ticket" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">Flight Ticket</h3>
+          <span class="service-badge">Best Airfare</span>
+        </div>
+
+        <!-- 4. Light Bill Payment -->
+        <div class="service-card block-hover" data-category="bills service" data-title="Light Bill Payment Bijli Electricity" onclick="openServiceModal('Light Bill Payment', 'Bijli Bill Payment with Instant Official Receipt (MPPKVVCL & All Boards)', 'assets/icon_light_bill.png')">
+          <div class="service-icon-wrap icon-bg-yellow">
+            <img src="assets/icon_light_bill.png" alt="Light Bill Payment" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">Light Bill Payment</h3>
+          <span class="service-badge">Instant Receipt</span>
+        </div>
+
+        <!-- 5. Mobile Recharge -->
+        <div class="service-card block-hover" data-category="bills service" data-title="Mobile Recharge Jio Airtel BSNL Vi" onclick="openServiceModal('Mobile Recharge', 'All Networks: Jio, Airtel, Vi, BSNL Special Recharge Offers', 'assets/icon_mobile_recharge.png')">
+          <div class="service-icon-wrap icon-bg-green">
+            <img src="assets/icon_mobile_recharge.png" alt="Mobile Recharge" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">Mobile Recharge</h3>
+          <span class="service-badge">All SIM Cards</span>
+        </div>
+
+        <!-- 6. DTH Recharge -->
+        <div class="service-card block-hover" data-category="bills service" data-title="DTH Recharge Tata Play Dish TV Airtel" onclick="openServiceModal('DTH Recharge', 'Tata Play, Dish TV, Airtel DTH, Videocon D2H Instant Packs', 'assets/icon_dth_recharge.png')">
+          <div class="service-icon-wrap icon-bg-pink">
+            <img src="assets/icon_dth_recharge.png" alt="DTH Recharge" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">DTH Recharge</h3>
+          <span class="service-badge">Instant Active</span>
+        </div>
+
+        <!-- 7. PAN Card -->
+        <div class="service-card block-hover" data-category="gov service" data-title="PAN Card NSDL UTI New Correction" onclick="openServiceModal('PAN Card', 'New PAN Card Application, Name/DOB Correction & e-PAN in 3 days', 'assets/icon_pan_card.png')">
+          <div class="service-icon-wrap icon-bg-blue">
+            <img src="assets/icon_pan_card.png" alt="PAN Card" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">PAN Card</h3>
+          <span class="service-badge">New &amp; Correction</span>
+        </div>
+
+        <!-- 8. Aadhaar eKYC -->
+        <div class="service-card block-hover" data-category="gov service" data-title="Aadhaar eKYC Verification Print Update" onclick="openServiceModal('Aadhaar eKYC', 'Aadhaar Biometric Verification, PVC Card Print, Address & mobile guidance', 'assets/icon_aadhaar.png')">
+          <div class="service-icon-wrap icon-bg-orange">
+            <img src="assets/icon_aadhaar.png" alt="Aadhaar eKYC" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">Aadhaar eKYC</h3>
+          <span class="service-badge">Biometric / Print</span>
+        </div>
+
+        <!-- 9. Money Transfer -->
+        <div class="service-card block-hover" data-category="bills service" data-title="Money Transfer DMT Bank Account Cash Deposit" onclick="openServiceModal('Money Transfer', 'Domestic Money Transfer 24x7 to any bank account in India instantly', 'assets/icon_money_transfer.png')">
+          <div class="service-icon-wrap icon-bg-green">
+            <img src="assets/icon_money_transfer.png" alt="Money Transfer" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">Money Transfer</h3>
+          <span class="service-badge">All Bank 24x7</span>
+        </div>
+
+        <!-- 10. Insurance -->
+        <div class="service-card block-hover" data-category="gov service" data-title="Insurance Bike Car PMJJBY PMSBY Health" onclick="openServiceModal('Insurance', 'Two-wheeler, Car, PMJJBY, PMSBY & Personal Health Insurance', 'assets/icon_insurance.png')">
+          <div class="service-icon-wrap icon-bg-purple">
+            <img src="assets/icon_insurance.png" alt="Insurance" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">Insurance</h3>
+          <span class="service-badge">Vehicle &amp; Life</span>
+        </div>
+
+        <!-- 11. Online Forms -->
+        <div class="service-card block-hover" data-category="gov service" data-title="Online Forms Sarkari Vacancy Ladli Behna Samagra" onclick="openServiceModal('Online Forms', 'Govt Job Forms, Ladli Behna Yojana, Samagra ID, Ration Card & College Admission', 'assets/icon_online_forms.png')">
+          <div class="service-icon-wrap icon-bg-orange">
+            <img src="assets/icon_online_forms.png" alt="Online Forms" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">Online Forms</h3>
+          <span class="service-badge">Sarkari &amp; Yojana</span>
+        </div>
+
+        <!-- 12. Print / Scan / Xerox -->
+        <div class="service-card block-hover" data-category="service" data-title="Print Scan Xerox Photo Copy Lamination" onclick="openServiceModal('Print / Scan / Xerox', 'High Quality Color Print, Photo Copy, Lamination & Document Scanning', 'assets/icon_print_xerox.png')">
+          <div class="service-icon-wrap icon-bg-blue">
+            <img src="assets/icon_print_xerox.png" alt="Print / Scan / Xerox" class="service-logo-img" loading="lazy">
+          </div>
+          <h3 class="card-title">Print / Scan / Xerox</h3>
+          <span class="service-badge">Color &amp; Black/White</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: OUR KIRANA PRODUCTS (Clean Block Cards) -->
+  <section id="kirana" class="section-kirana">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <div class="title-accent-badge">
+          <span class="dash-line orange-line"></span>
+          <h2 class="section-main-title">Our <span class="highlight-green">Kirana Products</span></h2>
+          <span class="dash-line orange-line"></span>
+        </div>
+        <p class="section-subtitle">High Quality Daily Need Products at Affordable Prices</p>
+      </div>
+
+      <!-- Kirana Product Grid: Auto-Fit responsive blocks -->
+      <div class="kirana-grid" id="kiranaGrid">
+
+        <!-- 1. Atta -->
+        <div class="product-card block-hover" data-category="kirana" data-title="Atta Gehun Flour">
+          <div class="product-image-wrap">
+            <img src="assets/product_atta.jpg" alt="Shuddh Gehun Atta" class="product-photo" loading="lazy">
+            <span class="product-tag-pill">Chakki Fresh</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Shuddh Gehun Atta</h3>
+            <p class="product-desc">100% Desi MP Gehun, Fresh Pisai (5kg, 10kg, 25kg)</p>
+            <div class="product-footer">
+              <span class="price-estimate">Best Village Rate</span>
+              <button class="btn-product-action" onclick="orderKiranaItem('Shuddh Gehun Atta')">
+                <span>View Products &rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Rice -->
+        <div class="product-card block-hover" data-category="kirana" data-title="Rice Chawal Basmati">
+          <div class="product-image-wrap">
+            <img src="assets/product_rice.jpg" alt="Quality Rice (Chawal)" class="product-photo" loading="lazy">
+            <span class="product-tag-pill">Premium Dana</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Quality Rice (Chawal)</h3>
+            <p class="product-desc">Basmati, Kolam aur Rozana ke liye swadisht chawal</p>
+            <div class="product-footer">
+              <span class="price-estimate">Fresh Stock</span>
+              <button class="btn-product-action" onclick="orderKiranaItem('Quality Rice (Chawal)')">
+                <span>View Products &rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Dal -->
+        <div class="product-card block-hover" data-category="kirana" data-title="Dal Pulses Toor Moong Chana">
+          <div class="product-image-wrap">
+            <img src="assets/product_dal.jpg" alt="Desi Dal (Pulses)" class="product-photo" loading="lazy">
+            <span class="product-tag-pill">Unpolished</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Desi Dal (Pulses)</h3>
+            <p class="product-desc">Toor Dal, Moong Mogar, Chana Dal, Urad Dal bina polish</p>
+            <div class="product-footer">
+              <span class="price-estimate">Shuddh &amp; Paushtik</span>
+              <button class="btn-product-action" onclick="orderKiranaItem('Desi Dal (Pulses)')">
+                <span>View Products &rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Sugar -->
+        <div class="product-card block-hover" data-category="kirana" data-title="Sugar Cheeni Gur Khand">
+          <div class="product-image-wrap">
+            <img src="assets/product_sugar.jpg" alt="Sugar & Gur (Cheeni)" class="product-photo" loading="lazy">
+            <span class="product-tag-pill">Pure White</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Sugar &amp; Gur (Cheeni)</h3>
+            <p class="product-desc">Safed shuddh cheeni aur desi gwalior gur</p>
+            <div class="product-footer">
+              <span class="price-estimate">Affordable Rate</span>
+              <button class="btn-product-action" onclick="orderKiranaItem('Sugar & Gur (Cheeni)')">
+                <span>View Products &rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Oil -->
+        <div class="product-card block-hover" data-category="kirana" data-title="Oil Tel Mustard Refined Fortune">
+          <div class="product-image-wrap">
+            <img src="assets/product_oil.jpg" alt="Cooking Oil (Tel)" class="product-photo" loading="lazy">
+            <span class="product-tag-pill">100% Shuddh</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Cooking Oil (Tel)</h3>
+            <p class="product-desc">Sarson Tel, Soyabean Refined (Fortune, Mahakosh pouch &amp; tin)</p>
+            <div class="product-footer">
+              <span class="price-estimate">Seal Pack Genuine</span>
+              <button class="btn-product-action" onclick="orderKiranaItem('Cooking Oil (Tel)')">
+                <span>View Products &rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Tea / Spices -->
+        <div class="product-card block-hover" data-category="kirana" data-title="Tea Spices Chai Masale Haldi Mirch">
+          <div class="product-image-wrap">
+            <img src="assets/product_tea_spices.jpg" alt="Tea & Spices (Masale)" class="product-photo" loading="lazy">
+            <span class="product-tag-pill">Taaza Masale</span>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Tea &amp; Spices (Masale)</h3>
+            <p class="product-desc">Kadak Chai Patti, Haldi, Lal Mirch, Dhaniya aur Khade Masale</p>
+            <div class="product-footer">
+              <span class="price-estimate">Khushbudar &amp; Asli</span>
+              <button class="btn-product-action" onclick="orderKiranaItem('Tea & Spices (Masale)')">
+                <span>View Products &rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Feature Trust Blocks -->
+  <section class="trust-features-bar">
+    <div class="container features-container">
+      <div class="feature-box">
+        <div class="f-icon green-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="f-text">
+          <h4>Trusted Service</h4>
+          <p>Reliable &amp; Secure Digital Seva</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="f-icon blue-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+        </div>
+        <div class="f-text">
+          <h4>Quick Support</h4>
+          <p>Always Here for Our Villagers</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="f-icon orange-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+        </div>
+        <div class="f-text">
+          <h4>Affordable Prices</h4>
+          <p>Best Value &amp; Fair Rates for Everyone</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="f-icon red-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </div>
+        <div class="f-text">
+          <h4>Daily Need Products</h4>
+          <p>Fresh &amp; Quality Kirana Items</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: VISIT US TODAY & SHOP BOARD SHOWCASE -->
+  <section id="about" class="section-visit-us">
+    <div class="container visit-container">
+      
+      <!-- Left: Real Shop Front Photo Card -->
+      <div class="shop-board-column">
+        <div class="real-shop-photo-card">
+          <div class="shop-photo-header">
+            <span class="shop-photo-title">🏪 Asli Dukan Ki Photo (Our Real Shop)</span>
+            <span class="shop-status-pill">Gram Ukediya</span>
+          </div>
+          <div class="shop-front-img-wrap">
+            <img src="assets/shop_front_clean.jpg" alt="Balaji Online Centre & Kirana Shop Front - Gram Ukediya" class="shop-front-img" loading="lazy">
+            <div class="shop-img-caption">
+              <span>Balaji Online Centre &amp; Kirana • Deepak Hada</span>
+            </div>
+          </div>
+          <div class="shop-photo-footer">
+            <p>📍 Gram Ukediya, Tehsil Jaora, Jila Ratlam (MP)</p>
+          </div>
+        </div>
+
+        <div class="shop-poster-trigger-row" style="margin-top: 0.85rem; text-align: center;">
+          <button class="btn btn-outline-call" onclick="openModal('posterModal')" style="width: 100%; border-radius: 8px; font-weight: 700; background: #ffffff; border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm);">
+            🖼️ View Original Design Poster / Banner
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Contact Information & Address -->
+      <div class="visit-info-column" id="contact">
+        <div class="visit-info-card">
+          <h2 class="visit-title">Visit Us Today</h2>
+
+          <div class="info-item">
+            <div class="item-icon-box red-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="item-details">
+              <strong>Balaji Online Centre &amp; Kirana</strong>
+              <p>Gaon ki digital dukan aur poora kirana saman</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="item-icon-box blue-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="item-details">
+              <strong>Deepak Hada</strong>
+              <span class="role-tag">Shop Owner &amp; Operator</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="item-icon-box orange-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            </div>
+            <div class="item-details">
+              <strong>Gram Ukediya, Tehsil Jaora</strong>
+              <p>Jila Ratlam, Madhya Pradesh - 457226</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="item-icon-box green-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="item-details">
+              <strong>+91 97534 56789</strong>
+              <p>Call ya WhatsApp par kabhi bhi sampark karein</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="item-icon-box purple-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="item-details">
+              <strong>Mon - Sun : 8:00 AM - 9:00 PM</strong>
+              <p>Saaton din khula rehta hai gaon ki seva ke liye</p>
+            </div>
+          </div>
+
+          <!-- Highlight Hindi Callout Box from Image -->
+          <div class="yellow-highlight-stamp">
+            <div class="stamp-text">
+              <span class="stamp-lead">आपकी हर जरूरत का एक ही पता</span>
+              <strong class="stamp-brand">Balaji Online Centre &amp; Kirana</strong>
+            </div>
+            <div class="stamp-kendra-icon">🏪</div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="visit-action-buttons">
+            <a href="tel:+919753456789" class="btn btn-call-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Call Deepak Ji</span>
+            </a>
+            <a href="https://maps.google.com/?q=Ukediya,Jaora,Ratlam" target="_blank" class="btn btn-directions">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              <span>Map Directions</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modern Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <!-- Brand & Mission Column -->
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <div class="logo-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            <span class="logo-badge-b">B</span>
+          </div>
+          <div class="footer-brand-title">
+            <span>Balaji</span>
+            <small>Online Centre &amp; Kirana</small>
+          </div>
+        </div>
+        <p class="footer-tagline">Aapke Gaon Ki Digital Aur Kirana Seva</p>
+        <p class="footer-mission-sub">Kendra Sanchalak: Deepak Hada<br>Gram Ukediya, Tehsil Jaora, Ratlam (MP)</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">&rarr; Home</a></li>
+          <li><a href="#services">&rarr; Our Services</a></li>
+          <li><a href="#kirana">&rarr; Kirana Store</a></li>
+          <li><a href="#about">&rarr; About Us</a></li>
+          <li><a href="#contact">&rarr; Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">&rarr; Ticket Booking</a></li>
+          <li><a href="#services">&rarr; Bill Payment</a></li>
+          <li><a href="#services">&rarr; PAN Card &amp; eKYC</a></li>
+          <li><a href="#services">&rarr; Money Transfer</a></li>
+          <li><a href="#services">&rarr; Insurance</a></li>
+          <li><a href="#services">&rarr; Online Forms</a></li>
+          <li><a href="#services">&rarr; Print / Scan / Xerox</a></li>
+        </ul>
+      </div>
+
+      <!-- Follow & Social -->
+      <div class="footer-col social-col">
+        <h4 class="footer-heading">Follow Us</h4>
+        <div class="social-icons-group">
+          <!-- WhatsApp Icon -->
+          <a href="https://wa.me/919753456789" target="_blank" class="social-btn s-wa" title="WhatsApp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          </a>
+          <!-- Facebook Icon -->
+          <a href="#" class="social-btn s-fb" title="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <!-- YouTube Icon -->
+          <a href="#" class="social-btn s-yt" title="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+        <p class="community-tags">Local Service | Digital India | Aapka Apna Kendra</p>
+      </div>
+
+    </div>
+
+    <!-- Copyright Bottom Line -->
+    <div class="footer-bottom-line">
+      <div class="container footer-subtext-row">
+        <span>&copy; 2026 Balaji Online Centre &amp; Kirana. All Rights Reserved.</span>
+        <span>Gram Ukediya, Tehsil Jaora, Jila Ratlam, MP | Designed for Our Community ❤️</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile WhatsApp Quick Button -->
+  <a href="https://wa.me/919753456789?text=Namaste%20Deepak%20Bhaiya,%20mujhe%20seva%20chahiye" target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" title="Direct WhatsApp Deepak Hada">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+    <span class="floating-tip">WhatsApp</span>
+  </a>
+
+  <!-- MODAL: Service Booking / Inquiry -->
+  <div class="modal-backdrop" id="serviceModal">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeModal('serviceModal')">&times;</button>
+      <div class="modal-header">
+        <span class="modal-icon-badge" id="modalIcon">⚡</span>
+        <div>
+          <h3 class="modal-title" id="modalServiceName">Service Name</h3>
+          <p class="modal-subtitle" id="modalServiceDesc">Service Description Details</p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <form id="serviceInquiryForm" onsubmit="handleInquirySubmit(event)">
+          <div class="form-group">
+            <label for="custName">Aapka Naam (Your Name):</label>
+            <input type="text" id="custName" placeholder="Jaise: Ramesh Kumar" required>
+          </div>
+          <div class="form-group">
+            <label for="custPhone">Mobile Number:</label>
+            <input type="tel" id="custPhone" placeholder="10 digit mobile number" pattern="[0-9]{10}" required>
+          </div>
+          <div class="form-group">
+            <label for="custDetails">Kya Jankari / Seva Chahiye?</label>
+            <textarea id="custDetails" rows="3" placeholder="Apni jarurat yahan likhein ya direct WhatsApp par message bhejein..."></textarea>
+          </div>
+          <div class="modal-action-buttons">
+            <button type="submit" class="btn btn-whatsapp-full">
+              <span>Send on WhatsApp</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            </button>
+            <a href="tel:+919753456789" class="btn btn-outline-call">
+              Direct Call Deepak Ji
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: QR Code Modal -->
+  <div class="modal-backdrop" id="qrModal">
+    <div class="modal-dialog qr-modal-dialog">
+      <button class="modal-close" onclick="closeModal('qrModal')">&times;</button>
+      <div class="text-center">
+        <h3 class="modal-title">BHIM UPI QR Code</h3>
+        <p class="modal-subtitle">Balaji Online Centre &amp; Kirana</p>
+        <div class="large-qr-card">
+          <img src="assets/qr_standee_card.jpg" alt="BHIM UPI QR Standee" style="width: 150px; height: auto; border-radius: 8px; box-shadow: var(--shadow-sm); margin-bottom: 0.5rem; display: block; margin-inline: auto;">
+          <div class="qr-brand-tag">Deepak Hada | Gram Ukediya</div>
+          <p class="qr-note">Scan with Google Pay, PhonePe, Paytm or BHIM UPI</p>
+        </div>
+        <a href="tel:+919753456789" class="btn btn-call-primary" style="margin-top: 1rem; width: 100%;">
+          Call: +91 97534 56789
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Full Poster Preview Modal -->
+  <div class="modal-backdrop" id="posterModal">
+    <div class="modal-dialog" style="max-width: 680px; max-height: 90vh; overflow-y: auto; text-align: center;">
+      <button class="modal-close" onclick="closeModal('posterModal')">&times;</button>
+      <h3 class="modal-title" style="margin-bottom: 0.5rem;">Original Poster Design</h3>
+      <p class="modal-subtitle" style="margin-bottom: 1rem;">Balaji Online Centre &amp; Kirana - Gram Ukediya, Jaora, Ratlam</p>
+      <div style="border-radius: 12px; overflow: hidden; border: 2px solid #e2e8f0; box-shadow: var(--shadow-md);">
+        <img src="poster-preview.png" alt="Balaji Online Centre & Kirana Original Banner" style="width: 100%; height: auto; display: block;">
+      </div>
+      <div style="margin-top: 1rem; display: flex; gap: 0.5rem; justify-content: center;">
+        <a href="tel:+919753456789" class="btn btn-call-primary">Call Deepak Ji</a>
+        <a href="https://wa.me/919753456789" target="_blank" class="btn btn-whatsapp-action">Direct WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
