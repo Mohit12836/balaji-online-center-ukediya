@@ -362,31 +362,33 @@ button {
   color: #ffffff !important;
 }
 
-/* Laharate Hui Light (Shimmer Light Wave) flowing through buttons */
-.btn::after,
-.btn-product-action::after,
-.btn-call-primary::after,
-.btn-directions::after,
-.btn-whatsapp-full::after,
-.overlay-qr-btn::after {
-  content: '';
-  position: absolute;
-  top: -60%;
-  left: -130%;
-  width: 65%;
-  height: 220%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.12) 20%,
-    rgba(254, 240, 138, 0.8) 50%,
-    rgba(255, 255, 255, 0.4) 70%,
-    transparent 100%
-  );
-  transform: rotate(25deg);
-  animation: lahraatiLight 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  pointer-events: none;
-  z-index: 2;
+@media (min-width: 769px) {
+  /* Laharate Hui Light (Shimmer Light Wave) flowing through buttons only on Desktop */
+  .btn::after,
+  .btn-product-action::after,
+  .btn-call-primary::after,
+  .btn-directions::after,
+  .btn-whatsapp-full::after,
+  .overlay-qr-btn::after {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: -130%;
+    width: 65%;
+    height: 220%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.12) 20%,
+      rgba(254, 240, 138, 0.8) 50%,
+      rgba(255, 255, 255, 0.4) 70%,
+      transparent 100%
+    );
+    transform: rotate(25deg);
+    animation: lahraatiLight 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    pointer-events: none;
+    z-index: 2;
+  }
 }
 
 @keyframes lahraatiLight {
@@ -1708,8 +1710,13 @@ button {
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
-  transition: var(--transition-spring);
-  animation: floatBounce 2.4s infinite ease-in-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (min-width: 769px) {
+  .floating-whatsapp-btn {
+    animation: floatBounce 2.4s infinite ease-in-out;
+  }
 }
 
 @keyframes floatBounce {
@@ -1718,7 +1725,7 @@ button {
 }
 
 .floating-whatsapp-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
   box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
 }
 
