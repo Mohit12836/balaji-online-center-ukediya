@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Development Quotation - Balaji Online Centre & Kirana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #0f172a;
+      padding: 24px 12px;
+      display: flex;
+      justify-content: center;
+    }
+    .print-btn-bar {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 100;
+      display: flex;
+      gap: 10px;
+    }
+    .btn-action {
+      background: #0f172a;
+      color: #ffffff;
+      border: 1.5px solid #f59e0b;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.2s;
+    }
+    .btn-action:hover {
+      background: #1e293b;
+      transform: translateY(-2px);
+    }
+    .quotation-sheet {
+      width: 100%;
+      max-width: 860px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+    /* Top Header */
+    .header-band {
+      display: grid;
+      grid-template-columns: 200px 1fr 140px;
+      align-items: center;
+      padding: 14px 20px;
+      background: #ffffff;
+      border-bottom: 3px solid #f59e0b;
+      gap: 16px;
+    }
+    .header-shop-img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #e2e8f0;
+    }
+    .header-center-info {
+      text-align: center;
+    }
+    .om-shree {
+      font-size: 12px;
+      font-weight: 700;
+      color: #b91c1c;
+      letter-spacing: 1px;
+    }
+    .header-brand-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0b3b60;
+      line-height: 1.15;
+      margin: 2px 0 6px;
+    }
+    .yellow-pill-tag {
+      display: inline-block;
+      background: #fde047;
+      color: #713f12;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 14px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+    }
+    .header-sub-meta {
+      font-size: 12px;
+      color: #334155;
+      line-height: 1.4;
+    }
+    .header-sub-meta strong {
+      color: #0f172a;
+    }
+    .header-god-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .god-badge-pill {
+      font-size: 11px;
+      background: #b91c1c;
+      color: #ffffff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      margin-top: 4px;
+      white-space: nowrap;
+    }
+    /* Title Bar */
+    .title-banner {
+      background: linear-gradient(135deg, #0f3b64, #1e40af);
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .title-left h1 {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    .title-left span {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+    .meta-box-white {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 12px;
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 12px;
+      row-gap: 2px;
+      font-weight: 600;
+    }
+    .meta-box-white span.val {
+      color: #1e3a8a;
+      font-weight: 700;
+    }
+    /* Client Info & Mockup Row */
+    .client-mockup-row {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      padding: 18px 24px;
+      gap: 20px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      align-items: center;
+    }
+    .client-details-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13.5px;
+    }
+    .client-row {
+      display: grid;
+      grid-template-columns: 130px 12px 1fr;
+      align-items: center;
+    }
+    .client-row .label {
+      color: #475569;
+      font-weight: 600;
+    }
+    .client-row .value {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .live-badge-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #16a34a;
+      color: #ffffff;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 4px;
+    }
+    .mockup-display {
+      background: #0f172a;
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      border: 1px solid #cbd5e1;
+      text-align: center;
+    }
+    .mockup-screen-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .mockup-subtext {
+      font-size: 11px;
+      color: #fde047;
+      font-weight: 700;
+      margin-top: 5px;
+    }
+    /* Two Column Showcase (Services + Kirana) */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      padding: 16px 24px;
+      gap: 16px;
+      background: #ffffff;
+    }
+    .block-box {
+      border: 1.5px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .block-header {
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .services-header {
+      background: #fef2f2;
+      color: #dc2626;
+      border-bottom: 1.5px solid #fee2e2;
+    }
+    .kirana-header {
+      background: #f0fdf4;
+      color: #15803d;
+      border-bottom: 1.5px solid #dcfce7;
+    }
+    .services-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      padding: 12px;
+    }
+    .mini-service-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 6px 4px;
+    }
+    .mini-service-item img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+      margin-bottom: 4px;
+    }
+    .mini-service-item span {
+      font-size: 10px;
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.15;
+    }
+    .kirana-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      padding: 12px;
+    }
+    .mini-kirana-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 6px 4px;
+    }
+    .mini-kirana-item img {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+    .mini-kirana-item span {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #15803d;
+    }
+    .kirana-footer-strip {
+      background: #15803d;
+      color: #ffffff;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px;
+    }
+    /* Pricing Table */
+    .table-container {
+      padding: 0 24px 16px;
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1.5px solid #dc2626;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .pricing-table th {
+      background: #b91c1c;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 9px 12px;
+      text-align: left;
+    }
+    .pricing-table th.center, .pricing-table td.center {
+      text-align: center;
+    }
+    .pricing-table th.right, .pricing-table td.right {
+      text-align: right;
+    }
+    .pricing-table td {
+      padding: 10px 12px;
+      font-size: 13px;
+      border-bottom: 1px solid #fee2e2;
+    }
+    .pricing-table tr:nth-child(even) {
+      background: #fef2f2;
+    }
+    .price-big {
+      font-size: 16px;
+      font-weight: 800;
+      color: #b91c1c;
+    }
+    /* Features Checkboxes */
+    .features-band {
+      margin: 0 24px 16px;
+      border: 1.5px solid #0284c7;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .features-header {
+      background: #0284c7;
+      color: #ffffff;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .features-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 12px 16px;
+      gap: 8px 20px;
+      background: #f0f9ff;
+    }
+    .feature-point {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #0c4a6e;
+    }
+    .feature-point .check-icon {
+      width: 16px;
+      height: 16px;
+      background: #16a34a;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+    /* Terms & Signature */
+    .footer-terms-row {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      padding: 0 24px 20px;
+      gap: 20px;
+      align-items: flex-end;
+    }
+    .terms-card {
+      background: #fefce8;
+      border: 1px solid #fef08a;
+      border-radius: 6px;
+      padding: 10px 14px;
+    }
+    .terms-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: #854d0e;
+      margin-bottom: 4px;
+    }
+    .terms-card ol {
+      padding-left: 16px;
+      font-size: 11px;
+      color: #713f12;
+      line-height: 1.45;
+    }
+    .signature-card {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .trust-msg {
+      font-size: 11.5px;
+      color: #334155;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .sig-img {
+      font-family: 'Brush Script MT', cursive, sans-serif;
+      font-size: 24px;
+      color: #0f172a;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .sig-name {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .sig-sub {
+      font-size: 11px;
+      color: #64748b;
+    }
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .print-btn-bar {
+        display: none !important;
+      }
+      .quotation-sheet {
+        border: none;
+        box-shadow: none;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-btn-bar">
+    <button class="btn-action" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="quotation-sheet">
+    
+    <!-- Header Band with Real Photos & Slogan -->
+    <div class="header-band">
+      <img src="assets/shop_front_clean.jpg" alt="Shop Front" class="header-shop-img">
+      <div class="header-center-info">
+        <span class="om-shree">|| श्री बालाजी ||</span>
+        <h2 class="header-brand-title">बालाजी ऑनलाइन सेन्टर एवं किराना</h2>
+        <div class="yellow-pill-tag">सभी सरकारी सेवाएँ एवं दैनिक जरूरत का सामान अब एक ही जगह पर</div>
+        <div class="header-sub-meta">
+          📍 <strong>ग्राम उकेड़िया</strong>, तहसील जावरा, जिला रतलाम (म.प्र.)<br>
+          👤 <strong>संचालक: श्री दीपक हाड़ा</strong>
+        </div>
+      </div>
+      <div class="header-god-col">
+        <span style="font-size: 38px;">🛕</span>
+        <div class="god-badge-pill">|| सेवा ही हमारा उद्देश्य ||</div>
+      </div>
+    </div>
+
+    <!-- Title Bar -->
+    <div class="title-banner">
+      <div class="title-left">
+        <h1>WEBSITE DEVELOPMENT QUOTATION</h1>
+        <span>(वेबसाइट निर्माण प्रस्ताव एवं बिल विवरण)</span>
+      </div>
+      <div class="meta-box-white">
+        <span>Quotation No.</span><span class="val">: BO-2026-001</span>
+        <span>Date</span><span class="val">: 22 October 2026</span>
+        <span>Valid Till</span><span class="val">: 30 Days</span>
+      </div>
+    </div>
+
+    <!-- Client Info & Live Mockup -->
+    <div class="client-mockup-row">
+      <div class="client-details-list">
+        <div class="client-row">
+          <span class="label">👤 Client Name</span><span>:</span>
+          <span class="value">श्री दीपक हाड़ा</span>
+        </div>
+        <div class="client-row">
+          <span class="label">🏪 Business Name</span><span>:</span>
+          <span class="value">बालाजी ऑनलाइन सेन्टर एवं किराना</span>
+        </div>
+        <div class="client-row">
+          <span class="label">📍 Address</span><span>:</span>
+          <span class="value">ग्राम उकेड़िया, तहसील जावरा, जिला रतलाम (म.प्र.)</span>
+        </div>
+        <div class="client-row">
+          <span class="label">💼 Project</span><span>:</span>
+          <span class="value">व्यावसायिक वेबसाइट एवं व्हाट्सएप ऑटो-बुकिंग सिस्टम</span>
+        </div>
+        <div>
+          <a href="https://balaji-online-center.vercel.app" target="_blank" class="live-badge-link">
+            🚀 लाइव वेबसाइट: https://balaji-online-center.vercel.app
+          </a>
+        </div>
+      </div>
+      <div class="mockup-display">
+        <img src="assets/hero_counter_clean.jpg" alt="Balaji Online Centre Mockup" class="mockup-screen-img">
+        <div class="mockup-subtext">100% Mobile &amp; PC Auto-Fit Responsive</div>
+      </div>
+    </div>
+
+    <!-- Services & Kirana Showcase -->
+    <div class="showcase-grid">
+      <!-- 12 Services -->
+      <div class="block-box">
+        <div class="block-header services-header">
+          <span>⚙️ WEBSITE में शामिल 12+ प्रमुख ऑनलाइन सेवाएं</span>
+        </div>
+        <div class="services-mini-grid">
+          <div class="mini-service-item">
+            <img src="assets/icon_railway.png" alt="Railway">
+            <span>रेलवे टिकट</span>
+          </div>
+          <div class="mini-service-item">
+            <img src="assets/icon_bus.png" alt="Bus">
+            <span>बस टिकट</span>
+          </div>
+          <div class="mini-service-item">
+            <img src="assets/icon_flight.png" alt="Flight">
+            <span>फ्लाइट टिकट</span>
+          </div>
+          <div class="mini-service-item">
+            <img src="assets/icon_light_bill.png" alt="Light Bill">
+            <span>बिजली बिल</span>
+          </div>
+          <div class="mini-service-item">
+            <img src="assets/icon_mobile_recharge.png" alt="Recharge">
+            <span>मोबाइल रिचार्ज</span>
+          </div>
+          <div class="mini-service-item">
+            <img src="assets/icon_dth_recharge.png" alt="DTH">
+            <span>DTH रिचार्ज</span>
+          </div>
+          <div class="mini-service-item">
+            <img src="assets/icon_pan_card.png" alt="PAN Card">
+            <span>पैन कार्ड</span>
+          </div>
+          <div class="mini-service-item">
+            <img src="assets/icon_aadhaar.png" alt="Aadhaar">
+            <span>आधार eKYC</span>
+          </div>
+          <div class="mini-service-item">
+            <img src="assets/icon_money_transfer.png" alt="Money Transfer">
+            <span>मनी ट्रांसफर</span>
+          </div>
+          <div class="mini-service-item">
+            <img src="assets/icon_insurance.png" alt="Insurance">
+            <span>वाहन व बीमा</span>
+          </div>
+          <div class="mini-service-item">
+            <img src="assets/icon_online_forms.png" alt="Online Forms">
+            <span>सरकारी फॉर्म्स</span>
+          </div>
+          <div class="mini-service-item">
+            <img src="assets/icon_print_xerox.png" alt="Print">
+            <span>प्रिंट, जेरोक्स</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kirana Showcase -->
+      <div class="block-box">
+        <div class="block-header kirana-header">
+          <span>🛒 किराना प्रोडक्ट कैटलॉग</span>
+        </div>
+        <div class="kirana-mini-grid">
+          <div class="mini-kirana-item">
+            <img src="assets/product_atta.jpg" alt="Atta">
+            <span>आटा</span>
+          </div>
+          <div class="mini-kirana-item">
+            <img src="assets/product_rice.jpg" alt="Rice">
+            <span>चावल</span>
+          </div>
+          <div class="mini-kirana-item">
+            <img src="assets/product_dal.jpg" alt="Dal">
+            <span>दाल</span>
+          </div>
+          <div class="mini-kirana-item">
+            <img src="assets/product_oil.jpg" alt="Oil">
+            <span>तेल</span>
+          </div>
+          <div class="mini-kirana-item">
+            <img src="assets/product_sugar.jpg" alt="Sugar">
+            <span>चीनी</span>
+          </div>
+          <div class="mini-kirana-item">
+            <img src="assets/product_tea_spices.jpg" alt="Spices">
+            <span>मसाले</span>
+          </div>
+        </div>
+        <div class="kirana-footer-strip">और भी बहुत सारे दैनिक उपयोग के सामान...</div>
+      </div>
+    </div>
+
+    <!-- Pricing Table -->
+    <div class="table-container">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th style="width: 50px;" class="center">S.No.</th>
+            <th>विवरण (Item Description)</th>
+            <th class="center" style="width: 140px;">प्रकार</th>
+            <th class="right" style="width: 140px;">राशि (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="center"><strong>1</strong></td>
+            <td>
+              <strong>वेबसाइट निर्माण, डिज़ाइनिंग, 12 ऑनलाइन सर्विसेज, किराना कैटलॉग, UPI QR इंटीग्रेशन, व्हाट्सएप ऑटो-बुकिंग, क्लाउड सेटअप (फुल सेटअप)</strong>
+            </td>
+            <td class="center">एकमुश्त (One-Time)</td>
+            <td class="right price-big">₹12,000/-</td>
+          </tr>
+          <tr>
+            <td class="center"><strong>2</strong></td>
+            <td>
+              <strong>24×7 सुपरफास्ट क्लाउड होस्टिंग, सुरक्षा, रेट्स अपडेट व मंथली टेक्निकल मेंटेनेंस</strong>
+            </td>
+            <td class="center">मासिक (Monthly Retainer)</td>
+            <td class="right price-big">₹500/- <small style="font-size:11px;color:#64748b;">(प्रति माह)</small></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Features Checkboxes -->
+    <div class="features-band">
+      <div class="features-header">⚙️ वेबसाइट की मुख्य विशेषताएं (Features)</div>
+      <div class="features-columns">
+        <div class="feature-point">
+          <span class="check-icon">✓</span>
+          <span>मॉडर्न और प्रोफेशनल डिज़ाइन (मोबाइल व पीसी दोनों में परफेक्ट)</span>
+        </div>
+        <div class="feature-point">
+          <span class="check-icon">✓</span>
+          <span>12+ सरकारी एवं ट्रैवल सर्विसेज के ओरिजिनल HD आइकन</span>
+        </div>
+        <div class="feature-point">
+          <span class="check-icon">✓</span>
+          <span>1-क्लिक डायरेक्ट व्हाट्सएप बुकिंग (ग्राहक की detail सीधा आपके WhatsApp पर)</span>
+        </div>
+        <div class="feature-point">
+          <span class="check-icon">✓</span>
+          <span>तेज और सुरक्षित क्लाउड होस्टिंग (Fast Vercel Edge Cloud)</span>
+        </div>
+        <div class="feature-point">
+          <span class="check-icon">✓</span>
+          <span>किराना प्रोडक्ट्स का डिजिटल कैटलॉग</span>
+        </div>
+        <div class="feature-point">
+          <span class="check-icon">✓</span>
+          <span>SEO फ्रेंडली (Google पर दिखाई देने में मदद)</span>
+        </div>
+        <div class="feature-point">
+          <span class="check-icon">✓</span>
+          <span>UPI QR कोड (PhonePe / Google Pay / Paytm)</span>
+        </div>
+        <div class="feature-point">
+          <span class="check-icon">✓</span>
+          <span>जब चाहें बैनर, रेट्स, प्रोडक्ट अपडेट – तुरंत करवा देंगे</span>
+        </div>
+        <div class="feature-point">
+          <span class="check-icon">✓</span>
+          <span>लाइव "OPEN TODAY" बैज और आपकी दुकान की फोटो</span>
+        </div>
+        <div class="feature-point">
+          <span class="check-icon">✓</span>
+          <span>डेली बैकअप और 100% सुरक्षा गारंटी</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terms & Signature -->
+    <div class="footer-terms-row">
+      <div class="terms-card">
+        <div class="terms-title">📄 महत्वपूर्ण शर्तें (Terms &amp; Conditions):</div>
+        <ol>
+          <li>यह कोटेशन 30 दिनों तक मान्य है।</li>
+          <li>एकमुश्त भुगतान के बाद वेबसाइट तुरंत लाइव ट्रांसफर कर दी गई है।</li>
+          <li>मासिक मेंटेनेंस शुल्क ₹500/- प्रत्येक माह अग्रिम देय होगा।</li>
+          <li>किसी नए फीचर या बड़े बदलाव के लिए अलग से शुल्क लागू होगा।</li>
+          <li>सभी सामग्री (दुकान का नाम, फोटो, रेट्स, जानकारी) ग्राहक द्वारा उपलब्ध कराई गई है।</li>
+        </ol>
+      </div>
+
+      <div class="signature-card">
+        <div class="trust-msg">
+          🤝 आपके भरोसे के लिए धन्यवाद।<br>
+          हम हमेशा आपके व्यवसाय को डिजिटल रूप से आगे बढ़ाने के लिए तैयार हैं।
+        </div>
+        <div class="sig-img">Mohit Jain</div>
+        <div class="sig-name">MOHIT JAIN</div>
+        <div class="sig-sub">Website Development &amp; Digital Services</div>
+        <div class="sig-sub">Gram Ukediya &amp; Ratlam Region Support</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
