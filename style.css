@@ -727,24 +727,23 @@ button {
   left: 0.85rem;
   right: 0.85rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
   z-index: 2;
 }
 
 .overlay-tag-slogan {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(15, 23, 42, 0.88);
   backdrop-filter: blur(8px);
   color: #fef08a;
   font-family: 'Tiro Devanagari Hindi', serif;
   font-size: clamp(0.78rem, 0.4vw + 0.45rem, 0.92rem);
   font-weight: 700;
-  padding: 0.35rem 0.75rem;
+  padding: 0.4rem 0.95rem;
   border-radius: 50px;
   border: 1px solid rgba(254, 240, 138, 0.35);
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-align: center;
 }
 
 .overlay-qr-btn {
@@ -1955,7 +1954,7 @@ html, body {
 
   .hero-container {
     display: flex;
-    flex-direction: column; /* Clean natural document flow - no jumpy reordering */
+    flex-direction: column-reverse; /* Dukan ki photo wapas sabse upar dikhegi */
     align-items: center;
     text-align: center;
     gap: 1.25rem;
@@ -1964,8 +1963,8 @@ html, body {
 
   .hero-visual-col {
     width: 100%;
-    max-width: 340px;
-    margin: 0.5rem auto 0;
+    max-width: 360px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
   }
