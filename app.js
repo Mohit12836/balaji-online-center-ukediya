@@ -124,30 +124,40 @@ function initLiveSearchAndFilters() {
   });
 }
 
-// Active Nav highlight on scrolling
+// Active Nav highlight on scrolling (Optimized with requestAnimationFrame & passive listener)
 function initScrollNavActive() {
   const sections = document.querySelectorAll('main, section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link, .drawer-link');
+  let ticking = false;
 
   window.addEventListener('scroll', () => {
-    let currentId = '';
-    const scrollY = window.pageYOffset;
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        let currentId = '';
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-    sections.forEach(section => {
-      const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 120;
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        currentId = section.getAttribute('id');
-      }
-    });
+        sections.forEach(section => {
+          const sectionHeight = section.offsetHeight;
+          const sectionTop = section.offsetTop - 140;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            currentId = section.getAttribute('id');
+          }
+        });
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (currentId && link.getAttribute('href') === `#${currentId}`) {
-        link.classList.add('active');
-      }
-    });
-  });
+        if (currentId) {
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${currentId}`) {
+              link.classList.add('active');
+            } else if (link.getAttribute('href')?.startsWith('#')) {
+              link.classList.remove('active');
+            }
+          });
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
 }
 
 // Modal handling
